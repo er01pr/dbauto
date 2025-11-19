@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB Auto | Rent-to-Own & Certified Used Cars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page">
+        <header class="hero">
+            <div class="hero__bar">
+                <p>Over 1,200 vehicles released nationwide • Same-day approval • Concierge paperwork</p>
+            </div>
+            <nav class="nav">
+                <a class="logo" href="#">DB<span>Auto</span></a>
+                <ul class="nav__links">
+                    <li><a href="#inventory">Inventory</a></li>
+                    <li><a href="#latest">Latest units</a></li>
+                    <li><a href="#requirements">Requirements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a href="#contact" class="btn btn--ghost">Sell my car</a>
+                    <a href="#inventory" class="btn">View cars</a>
+                </div>
+            </nav>
+
+            <div class="hero__grid">
+                <div class="hero__content">
+                    <p class="eyebrow">Rent to own collections</p>
+                    <h1>Buy, sell, or rent-to-own your next car in a day.</h1>
+                    <p class="lead">DB Auto offers curated second-hand cars with flexible financing, concierge selling, and a friendly rent-to-own program that keeps everything transparent and fast.</p>
+                    <div class="hero__cta">
+                        <a href="#latest" class="btn btn--dark">See latest releases</a>
+                        <a href="#contact" class="btn btn--link">Get pre-approved →</a>
+                    </div>
+                    <div class="hero__stats">
+                        <div>
+                            <p class="stat__label">Approval speed</p>
+                            <p class="stat__value">Same day</p>
+                        </div>
+                        <div>
+                            <p class="stat__label">Release promise</p>
+                            <p class="stat__value">24 hours</p>
+                        </div>
+                        <div>
+                            <p class="stat__label">Customer rating</p>
+                            <p class="stat__value">4.9/5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__showcase" id="heroShowcase">
+                    <div class="hero__card hero__card--top">
+                        <p class="hero__card-label">Featured Unit</p>
+                        <h4 id="heroCarName">-</h4>
+                        <p id="heroCarDetails">-</p>
+                    </div>
+                    <div class="hero__image">
+                        <span class="hero__badge">Same-day release</span>
+                        <img id="heroCarImage" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" alt="Featured vehicle">
+                    </div>
+                    <div class="hero__card hero__card--bottom">
+                        <p>Downpayment</p>
+                        <h4 id="heroDownpayment">-</h4>
+                        <span class="hero__muted">Initial cashout</span>
+                    </div>
+                    <div class="hero__card hero__card--side">
+                        <p>Monthly amortization</p>
+                        <h4 id="heroMonthly">-</h4>
+                        <span id="heroTerm" class="hero__muted">-</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="brand-marquee" aria-label="Brand partners">
+            <div class="marquee" role="list">
+                <div class="marquee__group">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_logo.svg" alt="Toyota logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Honda_logo_logotype_emblem.png" alt="Honda logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg" alt="Ford logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Hyundai_logo.svg" alt="Hyundai logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Nissan_logo_2020.svg" alt="Nissan logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Mazda_logo_with_emblem.png" alt="Mazda logo">
+                </div>
+                <div class="marquee__group" aria-hidden="true">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_logo.svg" alt="Toyota logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Honda_logo_logotype_emblem.png" alt="Honda logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg" alt="Ford logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Hyundai_logo.svg" alt="Hyundai logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Nissan_logo_2020.svg" alt="Nissan logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Mazda_logo_with_emblem.png" alt="Mazda logo">
+                </div>
+            </div>
+        </section>
+
+        <section class="section news" aria-labelledby="news-heading">
+            <div class="section__header">
+                <div>
+                    <p class="eyebrow">News & promos</p>
+                    <h2 id="news-heading">Fresh DB Auto updates</h2>
+                </div>
+                <div class="slider__controls">
+                    <button class="slider__btn" data-action="prev" aria-label="Previous news"></button>
+                    <button class="slider__btn" data-action="next" aria-label="Next news"></button>
+                </div>
+            </div>
+            <div class="slider" data-slider="news">
+                <div class="slider__viewport" data-slider-track>
+                    <article class="news-card slider__item">
+                        <img src="https://images.unsplash.com/photo-1456335957509-6efadef6e52d?auto=format&fit=crop&w=900&q=80" alt="New branch">
+                        <div>
+                            <p class="news-card__tag">Announcement</p>
+                            <h3>Quezon City showroom now open</h3>
+                            <p>Walk-ins welcome for test drives and rent-to-own consultations.</p>
+                        </div>
+                    </article>
+                    <article class="news-card slider__item">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="Promo">
+                        <div>
+                            <p class="news-card__tag">Promo</p>
+                            <h3>₱20K off SUV downpayments</h3>
+                            <p>Limited units available with flexible 24–36 month terms.</p>
+                        </div>
+                    </article>
+                    <article class="news-card slider__item">
+                        <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80" alt="Event">
+                        <div>
+                            <p class="news-card__tag">Event</p>
+                            <h3>Weekend appraisal fair</h3>
+                            <p>Drive in your car for an on-the-spot selling offer and free detailing.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="latest" class="section inventory">
+            <div class="section__header">
+                <div>
+                    <p class="eyebrow">Latest units</p>
+                    <h2>Same-day release inventory</h2>
+                </div>
+                <div class="slider__controls">
+                    <button class="slider__btn" data-action="prev" aria-label="Previous unit"></button>
+                    <button class="slider__btn" data-action="next" aria-label="Next unit"></button>
+                </div>
+            </div>
+            <div class="slider" data-slider="latest">
+                <div class="slider__viewport" data-slider-track>
+                    <article class="unit-card slider__item">
+                        <div class="unit-card__media">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80" alt="2023 Toyota Vios">
+                            <span class="unit-card__badge unit-card__badge--rent">Rent to own</span>
+                            <span class="unit-card__pill">Automatic</span>
+                        </div>
+                        <div class="unit-card__body">
+                            <h3>2023 Toyota Vios G</h3>
+                            <p>21,000 km • Apple CarPlay • Toyota Safety Sense</p>
+                            <div class="unit-card__meta">
+                                <div class="price-chip">DP ₱150,000</div>
+                                <div>
+                                    <p class="price">₱19,507</p>
+                                    <span class="unit-card__muted">per month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="unit-card slider__item">
+                        <div class="unit-card__media">
+                            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=80" alt="2024 Mitsubishi XForce">
+                            <span class="unit-card__badge unit-card__badge--rent">Rent to own</span>
+                            <span class="unit-card__pill">Automatic</span>
+                        </div>
+                        <div class="unit-card__body">
+                            <h3>2024 Mitsubishi XForce GLS</h3>
+                            <p>Brand new • 5-year warranty • Active Yaw Control</p>
+                            <div class="unit-card__meta">
+                                <div class="price-chip">DP ₱280,000</div>
+                                <div>
+                                    <p class="price">₱28,260</p>
+                                    <span class="unit-card__muted">per month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="unit-card slider__item">
+                        <div class="unit-card__media">
+                            <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=80" alt="2016 Nissan Navara">
+                            <span class="unit-card__badge">Cash</span>
+                            <span class="unit-card__pill">Automatic</span>
+                        </div>
+                        <div class="unit-card__body">
+                            <h3>2016 Nissan Navara Calibre</h3>
+                            <p>64,000 km • 4x2 • Leather interior</p>
+                            <div class="unit-card__meta">
+                                <div class="price-chip price-chip--secondary">Cash only</div>
+                                <div>
+                                    <p class="price">₱650,000</p>
+                                    <span class="unit-card__muted">One day release</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="unit-card slider__item">
+                        <div class="unit-card__media">
+                            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=900&q=80" alt="2024 Montero GLX">
+                            <span class="unit-card__badge unit-card__badge--rent">Rent to own</span>
+                            <span class="unit-card__pill">Manual</span>
+                        </div>
+                        <div class="unit-card__body">
+                            <h3>2024 Mitsubishi Montero GLX</h3>
+                            <p>0 km • 24/7 roadside • 7-seater comfort</p>
+                            <div class="unit-card__meta">
+                                <div class="price-chip">DP ₱320,000</div>
+                                <div>
+                                    <p class="price">₱30,111</p>
+                                    <span class="unit-card__muted">per month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="inventory" class="section inventory inventory--featured">
+            <div class="section__header">
+                <div>
+                    <p class="eyebrow">Featured picks</p>
+                    <h2>Premium & collector units</h2>
+                </div>
+                <div class="slider__controls">
+                    <button class="slider__btn" data-action="prev" aria-label="Previous featured unit"></button>
+                    <button class="slider__btn" data-action="next" aria-label="Next featured unit"></button>
+                </div>
+            </div>
+            <div class="slider" data-slider="featured">
+                <div class="slider__viewport" data-slider-track>
+                    <article class="unit-card slider__item">
+                        <div class="unit-card__media">
+                            <img src="https://images.unsplash.com/photo-1503736334956-d4c63b43745b?auto=format&fit=crop&w=900&q=80" alt="2019 Toyota Alphard">
+                            <span class="unit-card__badge">Cash</span>
+                            <span class="unit-card__pill">Automatic</span>
+                        </div>
+                        <div class="unit-card__body">
+                            <h3>2019 Toyota Alphard V6</h3>
+                            <p>Executive lounge • Dual sunroof • Captain seats</p>
+                            <div class="unit-card__meta">
+                                <div class="price-chip price-chip--secondary">Cash only</div>
+                                <div>
+                                    <p class="price">₱1,900,000</p>
+                                    <span class="unit-card__muted">Luxury certified</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="unit-card slider__item">
+                        <div class="unit-card__media">
+                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="2017 Mitsubishi Adventure">
+                            <span class="unit-card__badge">Cash</span>
+                            <span class="unit-card__pill">Manual</span>
+                        </div>
+                        <div class="unit-card__body">
+                            <h3>2017 Mitsubishi Adventure GL Sport</h3>
+                            <p>Family MPV • Fresh interior • 3-year warranty</p>
+                            <div class="unit-card__meta">
+                                <div class="price-chip price-chip--secondary">Cash only</div>
+                                <div>
+                                    <p class="price">₱380,000</p>
+                                    <span class="unit-card__muted">Inspection ready</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="unit-card slider__item">
+                        <div class="unit-card__media">
+                            <img src="https://images.unsplash.com/photo-1511919884226-90617d6a52d4?auto=format&fit=crop&w=900&q=80" alt="2003 Isuzu Crosswind">
+                            <span class="unit-card__badge">Cash</span>
+                            <span class="unit-card__pill">Manual</span>
+                        </div>
+                        <div class="unit-card__body">
+                            <h3>2003 Isuzu Crosswind</h3>
+                            <p>Fresh paint • Reliable diesel • Perfect utility ride</p>
+                            <div class="unit-card__meta">
+                                <div class="price-chip price-chip--secondary">Cash only</div>
+                                <div>
+                                    <p class="price">₱420,000</p>
+                                    <span class="unit-card__muted">One day release</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="unit-card slider__item">
+                        <div class="unit-card__media">
+                            <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=80" alt="2025 Toyota Vios">
+                            <span class="unit-card__badge unit-card__badge--rent">Rent to own</span>
+                            <span class="unit-card__pill">Automatic</span>
+                        </div>
+                        <div class="unit-card__body">
+                            <h3>2025 Toyota Vios</h3>
+                            <p>Zero down promo when trading your old sedan.</p>
+                            <div class="unit-card__meta">
+                                <div class="price-chip">DP ₱120,000</div>
+                                <div>
+                                    <p class="price">₱18,300</p>
+                                    <span class="unit-card__muted">per month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="requirements" class="section requirements">
+            <div class="requirements__grid">
+                <div class="requirements__intro">
+                    <p class="eyebrow">Requirements</p>
+                    <h2>Only four documents stand between you and your keys.</h2>
+                    <p>Paperwork is streamlined so you can focus on picking the right car—not collecting folders of documents.</p>
+                    <a href="#latest" class="btn btn--dark">Browse cars now</a>
+                </div>
+                <div class="requirements__lists">
+                    <div>
+                        <p class="requirements__label">Needed from you</p>
+                        <ul>
+                            <li>2 valid government IDs</li>
+                            <li>Proof of income / remittance</li>
+                            <li>Proof of billing</li>
+                            <li>Initial cashout</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="requirements__label">What DB Auto handles</p>
+                        <ul>
+                            <li>One-day processing</li>
+                            <li>Same-day release scheduling</li>
+                            <li>No bank approval headaches</li>
+                            <li>After-sales concierge</li>
+                            <li>Nationwide delivery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta" aria-labelledby="cta-heading">
+            <div class="cta__content">
+                <div>
+                    <p class="eyebrow">Ready to sell?</p>
+                    <h2 id="cta-heading">Tell us what you drive—we'll send an offer today.</h2>
+                </div>
+                <a href="#contact" class="btn btn--light">Sell your car</a>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="contact__content">
+                <div class="contact__info">
+                    <p class="eyebrow">Start today</p>
+                    <h2>Talk to a DB Auto specialist</h2>
+                    <p>Virtual appointments and showroom visits available seven days a week.</p>
+                    <ul>
+                        <li><strong>Showroom:</strong> 95 Yanga St, Malabon City</li>
+                        <li><strong>Phone:</strong> (02) 555-0199 / 0955 422 3366</li>
+                        <li><strong>Email:</strong> hello@dbauto.ph</li>
+                    </ul>
+                </div>
+                <form class="contact__form">
+                    <label>
+                        Full name
+                        <input type="text" placeholder="Juan Dela Cruz" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" placeholder="you@example.com" required>
+                    </label>
+                    <label>
+                        I want to
+                        <select>
+                            <option>Buy a car</option>
+                            <option>Sell my car</option>
+                            <option>Join rent-to-own</option>
+                        </select>
+                    </label>
+                    <label>
+                        Message
+                        <textarea rows="4" placeholder="Share the car model or budget you're working with."></textarea>
+                    </label>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div>
+                <a class="logo" href="#">DB<span>Auto</span></a>
+                <p>© <span id="year"></span> DB Auto. Premium rent-to-own and certified pre-loved vehicles for Filipino drivers.</p>
+            </div>
+            <div class="footer__links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Facebook</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const heroCars = [
+            {
+                name: '2025 Toyota Vios GR-S',
+                details: 'Brand new • 0 km • Toyota Safety Sense',
+                downpayment: '₱150,000',
+                monthly: '₱19,500',
+                term: '24 months remaining',
+                image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80'
+            },
+            {
+                name: '2024 Mitsubishi XForce GLS',
+                details: 'Crossover • Wireless CarPlay • Adaptive Cruise',
+                downpayment: '₱280,000',
+                monthly: '₱28,260',
+                term: '30 months remaining',
+                image: 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80'
+            },
+            {
+                name: '2016 Nissan Navara Calibre',
+                details: 'Pickup • 64,000 km • Diesel 4x2',
+                downpayment: '₱200,000',
+                monthly: '₱22,990',
+                term: '18 months remaining',
+                image: 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80'
+            }
+        ];
+
+        let heroIndex = 0;
+        const heroElements = {
+            name: document.getElementById('heroCarName'),
+            details: document.getElementById('heroCarDetails'),
+            downpayment: document.getElementById('heroDownpayment'),
+            monthly: document.getElementById('heroMonthly'),
+            term: document.getElementById('heroTerm'),
+            image: document.getElementById('heroCarImage')
+        };
+
+        function updateHero() {
+            const car = heroCars[heroIndex];
+            heroElements.name.textContent = car.name;
+            heroElements.details.textContent = car.details;
+            heroElements.downpayment.textContent = car.downpayment;
+            heroElements.monthly.textContent = car.monthly;
+            heroElements.term.textContent = car.term;
+            heroElements.image.src = car.image;
+            heroIndex = (heroIndex + 1) % heroCars.length;
+        }
+
+        updateHero();
+        setInterval(updateHero, 8000);
+
+        document.querySelectorAll('[data-slider]').forEach((sliderSection) => {
+            const viewport = sliderSection.querySelector('[data-slider-track]');
+            const controls = sliderSection.previousElementSibling?.classList.contains('section__header')
+                ? sliderSection.previousElementSibling.querySelectorAll('[data-action]')
+                : sliderSection.parentElement.querySelectorAll('[data-action]');
+
+            controls.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const direction = btn.dataset.action === 'next' ? 1 : -1;
+                    viewport.scrollBy({
+                        left: direction * viewport.clientWidth,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
